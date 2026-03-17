@@ -32,22 +32,14 @@ import { NativeSettings, AndroidSettings, IOSSettings } from 'capacitor-native-s
  * Other options rely on undocumented URL schemes and may stop working
  * or cause App Store rejection.
  */
-const result = await NativeSettings.open({
-  optionAndroid: AndroidSettings.ApplicationDetails,
-  optionIOS: IOSSettings.App,
-});
+NativeSettings.open({
+  optionAndroid: AndroidSettings.ApplicationDetails, 
+  optionIOS: IOSSettings.App
+})
 
-if (!result.success) {
-  console.error(result.error);
-}
-
-const androidResult = await NativeSettings.openAndroid({
+NativeSettings.openAndroid({
   option: AndroidSettings.ApplicationDetails,
 });
-
-if (!androidResult.success) {
-  console.error(androidResult.error);
-}
 
 /**
  * ⚠️ iOS limitation
@@ -56,13 +48,9 @@ if (!androidResult.success) {
  * Other options rely on undocumented URL schemes and may stop working
  * or cause App Store rejection.
  */
-const iosResult = await NativeSettings.openIOS({
+NativeSettings.openIOS({
   option: IOSSettings.App,
 });
-
-if (!iosResult.success) {
-  console.error(iosResult.error);
-}
 ```
 
 ## API
