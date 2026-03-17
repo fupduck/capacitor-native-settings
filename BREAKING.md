@@ -1,6 +1,7 @@
 ## Versions
 
-- [Version 8.x.x](#version-8xx)
+- [Version 8.1.0](#version-810)
+- [Version 8.0.0](#version-800)
 - [Version 4.x.x](#version-4xx)
 
 ---
@@ -24,7 +25,7 @@ try {
 }
 ```
 
-## Version 8.x.x
+## Version 8.0.0
 
 ### ⚠️ Breaking Change: Error Handling Strategy
 
