@@ -5,6 +5,25 @@
 
 ---
 
+## Version 8.1.0
+
+### ⚠️ Breaking Change: Error Handling Strategy
+We have reverted the previous changes for error handling. Capacitor has since been updated and resolved its issues, allowing us to restore the original error handling behavior.
+```javascript
+// Old behavior (v8.0.0)
+const result = await NativeSettings.open(...);
+if (!result.success) {
+  console.error(result.error);
+}
+
+// New behavior (v8.1.0)
+try {
+  await NativeSettings.open(...);
+} catch (error) {
+  console.error(error);
+}
+```
+
 ## Version 8.x.x
 
 ### ⚠️ Breaking Change: Error Handling Strategy
