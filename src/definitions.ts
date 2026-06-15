@@ -10,7 +10,7 @@ export interface NativeSettingsPlugin {
    * @param options Platform-specific settings options.
    * @returns A promise resolving to the operation result.
    */
-  open(options: PlatformOptions): Promise<{ status: boolean }>;
+  open(options: PlatformOptions): Promise<{ success: boolean }>;
 
   /**
    * Opens the specified Android settings screen.
@@ -18,7 +18,7 @@ export interface NativeSettingsPlugin {
    * @param options Android settings options.
    * @returns A promise resolving to the operation result.
    */
-  openAndroid(options: AndroidOptions): Promise<{ status: boolean }>;
+  openAndroid(options: AndroidOptions): Promise<{ success: boolean }>;
 
   /**
    * Opens the specified iOS settings screen.
@@ -30,7 +30,7 @@ export interface NativeSettingsPlugin {
    * @param options iOS settings options.
    * @returns A promise resolving to the operation result.
    */
-  openIOS(options: IOSOptions): Promise<{ status: boolean }>;
+  openIOS(options: IOSOptions): Promise<{ success: boolean }>;
 }
 
 /**

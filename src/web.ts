@@ -9,19 +9,19 @@ import type { NativeSettingsPlugin } from './definitions';
  * This plugin is not supported on the web platform.
  */
 export class NativeSettingsWeb extends WebPlugin implements NativeSettingsPlugin {
-  async open(): Promise<{ status: boolean }> {
+  async open(): Promise<{ success: boolean }> {
     return new Promise<any>((_resolve, reject) => {
       reject(new Error('Not implemented for web.'));
     });
   }
 
-  async openAndroid(): Promise<{ status: boolean }> {
+  async openAndroid(): Promise<{ success: boolean }> {
     return new Promise<any>((_resolve, reject) => {
       reject(new Error('Not implemented for web.'));
     });
   }
 
-  async openIOS(): Promise<{ status: boolean }> {
+  async openIOS(): Promise<{ success: boolean }> {
     return new Promise<any>((_resolve, reject) => {
       reject(new Error('Not implemented for web.'));
     });
